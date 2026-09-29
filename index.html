@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainy Play — learning games for curious kids</title>
+  <meta name="description" content="Free, ad-free learning games for kids aged 3 to 12.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">🧠 Brainy<span>Play</span></a>
+    <div class="star-count" title="Stars earned in all games">⭐ <span id="total-stars">0</span></div>
+  </header>
+
+  <main>
+    <section id="age-screen">
+      <h1>Hey there, genius! 👋</h1>
+      <p class="subtitle">Quick question: how many candles were on your last birthday cake?</p>
+      <div class="age-grid" id="age-grid"></div>
+    </section>
+
+    <section id="games-screen" hidden>
+      <button id="change-age" class="btn">← Change age</button>
+      <h1 id="games-title"></h1>
+      <p class="subtitle" id="games-subtitle"></p>
+      <p class="empty-note" id="empty-note" hidden>
+        🍳 Our game chefs are still cooking for this age group. Peek at what's in the oven below!
+      </p>
+      <div class="game-grid" id="game-grid"></div>
+    </section>
+  </main>
+
+  <footer>No ads. No broccoli. Just brain snacks. 🥨</footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/ageGroups.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

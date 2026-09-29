@@ -1,0 +1,124 @@
+/* Shared styles for Brainy Play — used by the homepage and every game */
+
+:root {
+  --bg: #FFF8EC;
+  --ink: #2D2A4A;
+  --muted: #6B6890;
+  --card: #FFFFFF;
+  --primary: #EF6C3B;
+  --yellow: #FFD166;
+  --green: #06B584;
+  --blue: #3A86FF;
+  --purple: #8338EC;
+  --pink: #E83E9B;
+  --red: #E63946;
+  --radius: 24px;
+  --shadow: 0 6px 0 rgba(45, 42, 74, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fredoka", "Comic Sans MS", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+.logo span { color: var(--primary); }
+
+.star-count {
+  background: var(--card);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+}
+
+/* ---------- Layout ---------- */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px 20px 40px;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin: 8px 0 4px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.2rem;
+  margin: 0 0 28px;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(45, 42, 74, 0.12); }
+.btn:disabled { opacity: 0.5; cursor: default; transform: none; }
+.btn-primary { background: var(--primary); color: #fff; }
+
+button:focus-visible,
+a:focus-visible {
+  outline: 4px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

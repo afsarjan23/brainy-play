@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Builder — Brainy Play</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔤</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="btn" href="../../index.html" aria-label="Back to all games">🏠</a>
+    <div class="progress" aria-label="Word number">Word <span id="word-num">1</span> of <span id="word-total">10</span></div>
+    <div class="star-count" title="Stars this round">⭐ <span id="round-stars">0</span></div>
+  </header>
+
+  <main class="wb">
+    <div class="picture" id="picture" role="img"></div>
+    <div class="slots" id="slots"></div>
+    <p class="message" id="message" aria-live="polite"></p>
+    <div class="tiles" id="tiles"></div>
+    <div class="actions">
+      <button id="btn-speak" class="btn">🔊 Say it</button>
+      <button id="btn-hint" class="btn">💡 Hint</button>
+    </div>
+  </main>
+
+  <div class="overlay" id="results" hidden>
+    <div class="results-card">
+      <div class="results-icon" id="results-icon">🏆</div>
+      <h2 id="results-title"></h2>
+      <p id="results-text"></p>
+      <div class="actions">
+        <button id="btn-again" class="btn btn-primary">🔁 Play again</button>
+        <a class="btn" href="../../index.html">🏠 Home</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="confetti" aria-hidden="true"></div>
+
+  <script src="../../js/utils.js"></script>
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
